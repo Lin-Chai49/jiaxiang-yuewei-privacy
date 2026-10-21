@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>驾享悦维 · 隐私政策 · DriveCare AutoCare</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="驾享悦维把车辆档案、保养、加油、保险和洗车记录留在本机数据库 autocare.db。应用清单不声明 INTERNET。">
+<style>
+  :root {
+    --ink: #1c1915;
+    --muted: #5e584e;
+    --line: #e4dccb;
+    --paper: #f6f1e6;
+    --card: #fffdf8;
+    --navy: #141b24;
+    --navy-2: #243140;
+    --amber: #c4841d;
+    --amber-soft: #f3e2c4;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    color: var(--ink);
+    background:
+      radial-gradient(1200px 420px at 10% -10%, #2a3848 0%, transparent 55%),
+      var(--navy);
+    font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+    line-height: 1.75;
+  }
+  a { color: #8c5a10; text-underline-offset: 0.15em; }
+  a:focus-visible { outline: 2px solid #c4841d; outline-offset: 3px; }
+  header.top {
+    color: #f6f1e6;
+    padding: 48px 24px 28px;
+  }
+  .wrap { max-width: 820px; margin: 0 auto; }
+  .plate {
+    display: inline-block;
+    border: 1px solid #c4841d;
+    color: #f3e2c4;
+    letter-spacing: 0.14em;
+    font-size: 12px;
+    padding: 4px 10px;
+    text-transform: uppercase;
+  }
+  h1 {
+    font-family: "Songti SC", "Noto Serif SC", Palatino, "Palatino Linotype", serif;
+    font-weight: 600;
+    font-size: clamp(2rem, 5vw, 3.1rem);
+    line-height: 1.15;
+    margin: 14px 0 8px;
+  }
+  .lede { max-width: 40rem; color: #d9d0c2; margin: 0; }
+  .facts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 28px;
+  }
+  .fact {
+    background: rgba(255, 253, 248, 0.06);
+    border: 1px solid rgba(243, 226, 196, 0.25);
+    padding: 14px 16px;
+  }
+  .fact b { display: block; color: #f3e2c4; font-size: 0.95rem; }
+  .fact span { color: #c9c0b2; font-size: 0.88rem; }
+  main {
+    background: var(--paper);
+    border-top: 4px solid #c4841d;
+    padding: 8px 0 64px;
+  }
+  article { padding-top: 12px; }
+  nav.toc {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    padding: 22px 0 8px;
+    font-size: 0.92rem;
+  }
+  h2 {
+    font-family: "Songti SC", "Noto Serif SC", Palatino, serif;
+    font-size: 1.45rem;
+    margin: 2.2rem 0 0.6rem;
+    padding-top: 0.4rem;
+  }
+  h3 { font-size: 1.05rem; margin: 1.4rem 0 0.4rem; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.94rem; background: var(--card); }
+  th, td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+  th:first-child, td:first-child { white-space: nowrap; width: 1%; }
+  th { color: var(--muted); font-weight: 600; font-size: 0.78rem; letter-spacing: 0.04em; background: #f3ecdf; }
+  code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 0.88em; background: var(--amber-soft); padding: 0 4px; }
+  .note {
+    background: var(--card);
+    border-left: 3px solid #c4841d;
+    padding: 10px 14px;
+    margin: 14px 0;
+  }
+  footer.colophon {
+    color: #b7ad9f;
+    padding: 28px 24px 48px;
+    font-size: 0.88rem;
+  }
+  #en { border-top: 1px solid var(--line); margin-top: 48px; }
+  @media (max-width: 700px) {
+    .facts { grid-template-columns: 1fr; }
+    header.top { padding-top: 32px; }
+    table { display: block; overflow-x: auto; }
+  }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="plate">com.drivecare.autocare · V1.0.0</div>
+    <h1>驾享悦维<br>隐私政策</h1>
+    <p class="lede">这是一款记在你自己手机里的车辆保养与花费记录。下面按应用 V1.0.0 的实际行为说明：什么留在本机，什么会写成一个由你指定的文件，什么不会发生。</p>
+    <div class="facts">
+      <div class="fact"><b>清单里没有 INTERNET</b><span>应用不能自己打开网络连接。没有账号，也没有统计或广告 SDK。</span></div>
+      <div class="fact"><b>数据库 autocare.db</b><span>车主、车辆、保养、加油、保险、洗车都在这个本机 SQLite 库里。</span></div>
+      <div class="fact"><b>导出是一份 JSON</b><span>写到你在系统里选定的位置。应用不上传这份文件。</span></div>
+      <div class="fact"><b>邮件开关不发信</b><span>「邮件提醒（预留）」只是档案里的一个布尔值。</span></div>
+    </div>
+  </div>
+</header>
+<main>
+  <div class="wrap">
+    <nav class="toc" aria-label="目录">
+      <a href="#who">谁发布的</a>
+      <a href="#stored">存在本机的内容</a>
+      <a href="#photos">小票照片</a>
+      <a href="#reminders">提醒</a>
+      <a href="#files">导出、导入、删除</a>
+      <a href="#backup">系统备份</a>
+      <a href="#permissions">权限</a>
+      <a href="#libraries">开源库</a>
+      <a href="#contact">联系</a>
+      <a href="#en">English</a>
+    </nav>
+
+    <article lang="zh-CN">
+      <p>生效日期：2026 年 10 月 21 日。开发者：柴琳。</p>
+
+      <h2 id="who">谁发布的</h2>
+      <p>「驾享悦维」（DriveCare AutoCare）由柴琳独立开发。应用关于页写的版本是 V1.0.0，包名是 <code>com.drivecare.autocare</code>。应用界面是中文。</p>
+      <p>开发者没有为这个应用运营接收车辆数据的服务器。你填写的内容用来在本机计算里程、油耗、花费和提醒。</p>
+
+      <h2 id="stored">存在本机的内容</h2>
+      <p>Room 把数据放在应用私有目录的 SQLite 数据库 <code>autocare.db</code>。首次设置必须填写车主姓名、车牌号和当前里程。品牌和车型可以不填。电话、邮箱和 VIN 在「系统设置 → 车主信息」里，可以留空。</p>
+      <table>
+        <thead><tr><th>存在哪里</th><th>具体字段</th></tr></thead>
+        <tbody>
+          <tr><td>车辆档案一行</td><td>姓名、电话、邮箱、车牌、VIN、品牌、车型、购买日期、当前里程。保养间隔和保养提醒公里数，保险提醒天数，年检提醒天数（默认 45，设置页没有单独输入框）。货币和单位的默认值是 CNY、km、L、L/100km。三个通知开关。</td></tr>
+          <tr><td>保养</td><td>日期、当时里程、下次保养里程、间隔、项目、地点、费用、备注。</td></tr>
+          <tr><td>加油</td><td>日期、里程、升数、单价、总价、油品标号、加油站、小票文件路径、备注。</td></tr>
+          <tr><td>保险</td><td>类型、公司、保单号、起止日期、保费、到期前提醒天数、保障说明、是否归档。</td></tr>
+          <tr><td>洗车</td><td>日期、类型、地点、费用、1 到 5 的评分、小票文件路径、备注。</td></tr>
+        </tbody>
+      </table>
+      <p>设置页能改的提醒阈值是：保养间隔、保养提醒公里、保险到期天数、洗车间隔天数。</p>
+
+      <h2 id="photos">小票照片</h2>
+      <p>加油和洗车可以用系统的 Photo Picker 选一张图片。应用把它复制成私有目录 <code>receipts</code> 里的一张 JPEG，数据库里只存这个文件的路径。不申请 <code>READ_MEDIA_IMAGES</code> 或 <code>READ_EXTERNAL_STORAGE</code>，也不保留相册里的原始地址。</p>
+      <div class="note">删除某一条加油或洗车记录时，会删除它对应的小票文件。设置里的「清空全部本地数据」会删掉数据库里的档案和四类记录，不会删除 receipts 目录中的图片。卸载应用会连同这些图片一起删掉。</div>
+
+      <h2 id="reminders">提醒</h2>
+      <p>打开首页时，「提醒中心」按本机记录算出保养、保险和洗车提醒。这个计算不联网。</p>
+      <p>另外，WorkManager 大约每 24 小时用同一套规则再算一次，并把结果发成系统通知。这个任务不要求网络。Android 13 及以上只有在已授予通知权限时才发。Android 12 及以下没有这道运行时询问，任务会直接发。手机重启后，<code>RECEIVE_BOOT_COMPLETED</code> 让这个任务还能排上。</p>
+      <p>保养通知写的是超期或剩余里程。保险过期通知的正文可以同时写出保险公司和保单号。即将到期的保险通知写出保险公司和剩余天数，不写保单号。洗车通知写的是距离上次洗车的天数。这些文字只出现在本机。</p>
+      <p>「通知方式」里的三个开关都写进车辆档案。首页和每日任务都不读取它们。「邮件提醒（预留）」不会发送电子邮件。</p>
+
+      <h2 id="files">导出、导入、删除</h2>
+      <p>「系统设置 → 数据备份 → 导出 JSON」通过系统的保存对话框写文件，建议名是 <code>autocare_backup_</code> 加上当时的时间，类型是 JSON。文件里有车辆档案、保养、加油、保险和洗车记录，以及小票在本机上的路径，没有图片本身。应用只负责写入你选中的那个地址，不把文件传到开发者。</p>
+      <p>「导入备份」读取你选中的 JSON，先删掉现有的数据库记录，再写入文件里的记录。小票图片不会跟着这份 JSON 走。若你在系统选择器里把导出位置选成网盘，那是系统在同步你选的文件夹，不是这个应用在上传。</p>
+      <p>单条删除在对应的列表里。「清空全部本地数据」会先询问，确认后删除数据库记录，范围见上面的小票说明。</p>
+
+      <h2 id="backup">系统备份</h2>
+      <p>应用把 <code>android:allowBackup</code> 设为 false，并在自动备份和设备迁移规则里排除数据库、共享偏好和文件。Android 的自动云备份不会带走 <code>autocare.db</code> 和 <code>receipts</code>。</p>
+
+      <h2 id="permissions">权限</h2>
+      <p>应用自己的清单声明了两项权限，没有声明 <code>INTERNET</code>，也没有位置、相机、麦克风、通讯录或存储权限。</p>
+      <table>
+        <thead><tr><th>权限</th><th>用途</th></tr></thead>
+        <tbody>
+          <tr><td><code>POST_NOTIFICATIONS</code></td><td>Android 13 及以上用来显示本机保养、保险和洗车通知。拒绝后，应用内提醒中心仍可查看。Android 12 及以下没有这道运行时询问。</td></tr>
+          <tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>重启后重新安排大约每天一次的本地检查。</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="libraries">开源库</h2>
+      <p>界面用 Jetpack Compose 和 Material 3。数据库是 Room。每日任务是 WorkManager，并且把网络要求设为不需要。小票图片用 Coil 从本机文件显示。导入导出用 kotlinx.serialization。图表用 Vico。这些库随应用在本机运行。没有广告 SDK，没有统计 SDK，没有第三方登录。</p>
+
+      <h2 id="children">儿童</h2>
+      <p>本应用不以 13 岁以下儿童为对象。它没有单独的儿童账号。</p>
+
+      <h2 id="changes">政策变更</h2>
+      <p>行为或本页说明有变化时，会改上面的生效日期。</p>
+
+      <h2 id="contact">联系</h2>
+      <p>开发者柴琳。邮箱 <a href="mailto:samincase0@gmail.com">samincase0@gmail.com</a>。</p>
+    </article>
+
+    <article id="en" lang="en">
+      <h2>English</h2>
+      <p>Effective 21 October 2026. DriveCare AutoCare, package <code>com.drivecare.autocare</code>, version 1.0.0, is developed by Chai Lin. The in-app language is Chinese. The developer does not run a server that receives vehicle records.</p>
+
+      <h3>What stays on the device</h3>
+      <p>Room stores one SQLite database, <code>autocare.db</code>, in the app's private storage. First launch requires the owner's name, the plate number, and the current mileage. Brand and model are optional. Phone, email, and VIN are edited under Settings → owner info and may be left blank.</p>
+      <p>The profile row also stores maintenance interval and warning distance, insurance warning days, an inspection warning default of 45 days (no separate field on the settings screen), currency and unit defaults (CNY, km, L, L/100km), and three notification switches.</p>
+      <p>Maintenance rows store the date, odometer, next-service mileage, interval, job items, place, cost, and note. Fuel rows store the date, odometer, litres, unit price, total, grade, station, receipt path, and note. Insurance rows store the type, company, policy number, start and end, premium, warning days, coverage text, and whether the policy is archived. Car-wash rows store the date, type, place, cost, a rating from 1 to 5, receipt path, and note.</p>
+
+      <h3>Receipt photos</h3>
+      <p>Fuel and car-wash screens use the system Photo Picker. The app copies the picture into a JPEG under the private <code>receipts</code> directory and stores that path. It does not request <code>READ_MEDIA_IMAGES</code> or <code>READ_EXTERNAL_STORAGE</code>, and it does not keep the gallery URI.</p>
+      <p>Deleting one fuel or car-wash record deletes its receipt file. <strong>Clear all local data</strong> deletes the database rows and does not delete pictures already copied into <code>receipts</code>. Uninstalling the app deletes those files with the rest of the private storage.</p>
+
+      <h3>Reminders</h3>
+      <p>The home screen's reminder list is calculated from local records when you open the app. That calculation does not use the network.</p>
+      <p>WorkManager runs the same rules about every 24 hours and posts the result as system notifications. The job does not require a network. On Android 13 and later it posts only when notification permission is granted. On Android 12 and earlier there is no runtime prompt, and the job posts directly. <code>RECEIVE_BOOT_COMPLETED</code> lets that work be scheduled again after a reboot.</p>
+      <p>A maintenance notification states overdue or remaining kilometres. An overdue insurance notification can include both the insurer and the policy number. A not-yet-expired insurance notification includes the insurer and the days left, not the policy number. A car-wash notification states the days since the last wash. The text stays on the device.</p>
+      <p>The three switches under notification settings are saved on the profile. Neither the home screen nor the daily job reads them. The switch labelled as a reserved email reminder does not send email. The manifest does not declare <code>INTERNET</code>.</p>
+
+      <h3>Export, import, and deletion</h3>
+      <p>Settings → data backup → export JSON writes a file through the system save dialog. The suggested name starts with <code>autocare_backup_</code>. The JSON contains the profile and the four record lists, including receipt paths, not the image bytes. The app writes only to the location you pick. It does not upload the file to the developer. If you choose a cloud folder, that sync is the system's, not a request from this app.</p>
+      <p>Import reads a JSON you pick, deletes the current database rows, and writes the rows from the file. Receipt images are not inside the JSON.</p>
+
+      <h3>System backup and permissions</h3>
+      <p><code>android:allowBackup</code> is false. Cloud backup and device-transfer rules exclude the database, shared preferences, and files, so Android's automatic backup does not take <code>autocare.db</code> or <code>receipts</code>.</p>
+      <p>The app manifest declares <code>POST_NOTIFICATIONS</code> and <code>RECEIVE_BOOT_COMPLETED</code> only. It does not declare location, camera, microphone, contacts, or storage. On Android 13 and later, refusing notifications still leaves the in-app reminder list available. Android 12 and earlier have no runtime prompt for that permission.</p>
+
+      <h3>Libraries, children, contact</h3>
+      <p>The interface is Jetpack Compose and Material 3. Storage is Room. The daily job is WorkManager with network not required. Coil reads receipt files from local storage. Import and export use kotlinx.serialization. Charts use Vico. There is no advertising SDK, analytics SDK, or third-party login.</p>
+      <p>The app is not directed at children under 13. It has no separate child account.</p>
+      <p>This page's effective date changes when the explanation changes. Developer: Chai Lin. Email: <a href="mailto:samincase0@gmail.com">samincase0@gmail.com</a>.</p>
+    </article>
+  </div>
+</main>
+<footer class="colophon">
+  <div class="wrap">© 2026 驾享悦维 · DriveCare AutoCare · 柴琳</div>
+</footer>
+</body>
+</html>

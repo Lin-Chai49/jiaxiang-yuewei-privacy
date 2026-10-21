@@ -1,3 +1,5 @@
 title: 驾享悦维 · DriveCare
 description: 汽车保养提醒与用车成本统计 — 隐私政策
-theme: jekyll-theme-cayman
+exclude:
+  - README.md
+  - check.py
